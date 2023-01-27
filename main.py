@@ -19,7 +19,19 @@ class LinkedList:
             if current_node.next is None:
                 break
             current_node = current_node.next
-            new_node.previous = current_node
+        current_node.next = new_node
+        new_node.previous = current_node
+
+    def print(self):
+        if self.head is None:
+            print('list is empty!')
+            return
+        current_node = self.head
+        while True:
+            if current_node is None:
+                break
+            print(current_node.data)
+            current_node = current_node.next
 
 
 nodeOne = Node('Sadam')
@@ -30,3 +42,4 @@ linKedList = LinkedList()
 linKedList.insert(nodeOne)
 linKedList.insert(nodeTwo)
 linKedList.insert(nodeThree)
+linKedList.print()
