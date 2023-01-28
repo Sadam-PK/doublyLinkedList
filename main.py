@@ -33,6 +33,14 @@ class LinkedList:
             print(current_node.data)
             current_node = current_node.next
 
+    def reverse(self):
+        if self.head is None:
+            print('List empty..')
+            return
+        current_node = self.head
+        while current_node is None:
+            break
+
 
 nodeOne = Node('Sadam')
 nodeTwo = Node('Hamza')
@@ -42,4 +50,5 @@ linKedList = LinkedList()
 linKedList.insert(nodeOne)
 linKedList.insert(nodeTwo)
 linKedList.insert(nodeThree)
-linKedList.print()
+# linKedList.print()
+linKedList.reverse()
