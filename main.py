@@ -51,6 +51,9 @@ class LinkedList:
                 print(reverse_node.data)
                 reverse_node = reverse_node.previous
 
+    def insert_at_head(self, new_node):
+        temp_node = self.head
+
 
 nodeOne = Node('Sadam')
 nodeTwo = Node('Hamza')
@@ -61,4 +64,6 @@ linKedList.insert(nodeOne)
 linKedList.insert(nodeTwo)
 linKedList.insert(nodeThree)
 # linKedList.print()
-linKedList.reverse()
+# linKedList.reverse()
+nodeFour = Node('Ahad')
+linKedList.insert_at_head(nodeFour)
