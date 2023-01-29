@@ -38,8 +38,18 @@ class LinkedList:
             print('List empty..')
             return
         current_node = self.head
-        while current_node is None:
-            break
+        reverse_node = None
+        while True:
+            if current_node is None:
+                break
+            if current_node.next is None:
+                reverse_node = current_node
+            current_node = current_node.next
+            while True:
+                if reverse_node is None:
+                    break
+                print(reverse_node.data)
+                reverse_node = reverse_node.previous
 
 
 nodeOne = Node('Sadam')
