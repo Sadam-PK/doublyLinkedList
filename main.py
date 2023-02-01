@@ -53,3 +53,8 @@ linKedList.insert(nodeThree)
 # linKedList.print()
 linKedList.reverse()
 
+
+
+
+
+
