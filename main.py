@@ -42,6 +42,15 @@ class LinkedList:
             break
 
 
+
+
+
+
+
+
+
+
+
 nodeOne = Node('Sadam')
 nodeTwo = Node('Hamza')
 nodeThree = Node('Asad')
