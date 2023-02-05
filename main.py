@@ -91,6 +91,15 @@ class LinkedList:
         return length
 
 
+
+
+
+
+
+
+
+
+
 nodeOne = Node('Sadam')
 nodeTwo = Node('Hamza')
 nodeThree = Node('Asad')
