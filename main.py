@@ -58,6 +58,18 @@ class LinkedList:
         temp_node.previous = self.head
 
     def insert_at(self, new_node, position):
+        if position == 0:
+            self.insert_at_head(new_node)
+            return
+
+        if position is self.list_length():
+            self.insert(new_node)
+            return
+
+        if position < 0 or position > self.list_length():
+            print('Invalid Position')
+            return
+
         current_node = self.head
         current_position = 0
         while True:
@@ -70,7 +82,13 @@ class LinkedList:
             current_node = current_node.next
             current_position += 1
 
-    # sadam <-> ahad -> hamza <-> asad
+    def list_length(self):
+        length = 0
+        current_node = self.head
+        while current_node is not None:
+            current_node = current_node.next
+            length += 1
+        return length
 
 
 nodeOne = Node('Sadam')
@@ -85,5 +103,5 @@ linKedList.insert(nodeThree)
 # linKedList.reverse()
 nodeFour = Node('Ahad')
 # linKedList.insert_at_head(nodeFour)
-linKedList.insert_at(nodeFour, 1)
+linKedList.insert_at(nodeFour, 0)
 linKedList.print()
