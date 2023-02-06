@@ -100,6 +100,13 @@ class LinkedList:
                 break
             current_node = current_node.next
 
+    def delete_head(self):
+        # 1<->2<->3<->4->none
+        current_node = self.head
+        self.head = self.head.next
+        current_node.next = None
+        current_node.previous = None
+
 
 nodeOne = Node('Sadam')
 nodeTwo = Node('Hamza')
@@ -115,6 +122,8 @@ nodeFour = Node('Ahad')
 # linKedList.insert_at_head(nodeFour)
 linKedList.insert_at(nodeFour, 0)
 linKedList.print()
-linKedList.delete_end()
+# linKedList.delete_end()
 print('-------------')
+# linKedList.print()
+linKedList.delete_head()
 linKedList.print()
