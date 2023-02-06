@@ -102,10 +102,16 @@ class LinkedList:
 
     def delete_head(self):
         # 1<->2<->3<->4->none
-        current_node = self.head
+        # current_node = self.head
+        # self.head = self.head.next
+        # current_node.next = None
+        # current_node.previous = None
+
+        # # both working ---
+
         self.head = self.head.next
-        current_node.next = None
-        current_node.previous = None
+        self.head.previous.next = None
+        self.head.previous = None
 
 
 nodeOne = Node('Sadam')
