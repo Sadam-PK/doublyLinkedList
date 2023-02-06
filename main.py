@@ -90,14 +90,15 @@ class LinkedList:
             length += 1
         return length
 
-
-
-
-
-
-
-
-
+    def delete_end(self):
+        current_node = self.head
+        while True:
+            if current_node.next.next is None:
+                current_node.next.previous = None
+                current_node.next.next = None
+                current_node.next = None
+                break
+            current_node = current_node.next
 
 
 nodeOne = Node('Sadam')
@@ -113,4 +114,7 @@ linKedList.insert(nodeThree)
 nodeFour = Node('Ahad')
 # linKedList.insert_at_head(nodeFour)
 linKedList.insert_at(nodeFour, 0)
+linKedList.print()
+linKedList.delete_end()
+print('-------------')
 linKedList.print()
