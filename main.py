@@ -114,6 +114,15 @@ class LinkedList:
         self.head.previous = None
 
     def delete_at(self, position):
+        if position == self.list_length() - 1:
+            self.delete_end()
+            return
+        if position == 0:
+            self.delete_head()
+            return
+        if position < 0 or position > self.list_length() - 1:
+            print('Invalid position')
+            return
         # 1<->2<->3<->4->none
         current_node = self.head
         current_position = 0
@@ -121,8 +130,8 @@ class LinkedList:
             if current_position == position:
                 current_node.previous.next = current_node.next
                 current_node.next.previous = current_node.previous
-                current_node.previous = None
                 current_node.next = None
+                current_node.previous = None
                 del current_node
                 break
             current_node = current_node.next
@@ -149,5 +158,5 @@ print('-------------')
 # linKedList.delete_head()
 # linKedList.print()
 
-linKedList.delete_at(2)
+linKedList.delete_at(1)
 linKedList.print()
